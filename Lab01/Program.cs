@@ -20,7 +20,7 @@ class Program
         s1.WypiszInfo();
 
 
-        Samochod s2 = new Samochod("Syrena", "105", 2, 800, 7.6);
+        Samochod s2 = new Samochod("Syrena", "105", 2, 800, 7.6,"K1 NIGGA");
         s2.WypiszInfo();
         double kosztPrzejazdu = s2.CenaPaliwa(30.5, 4.85);
         Console.WriteLine("Koszt przejazdu: " + kosztPrzejazdu);
@@ -28,8 +28,8 @@ class Program
     }
     public static void Zadanie2() 
     {
-        Samochod s1 = new Samochod("Fiat", "126p", 2, 650, 6.0);
-        Samochod s2 = new Samochod("Syrena", "105", 2, 800, 7.6);
+        Samochod s1 = new Samochod("Fiat", "126p", 2, 650, 6.0, "K1 NIGGA");
+        Samochod s2 = new Samochod("Syrena", "105", 2, 800, 7.6, "K1 NIGGA");
         Garaz g1 = new Garaz();
         g1.Adres = "ul. Garażowa 1";
         g1.Pojemnosc = 1;
@@ -47,11 +47,37 @@ class Program
         g2.WyprowadzSamochod(); //wypierdala z butow ostatnie auto
         g2.WyprowadzSamochod(); //nic nie moze zrobic bo jest wiesniakiem skonczonym
     }
+    public static void Zadanie3() 
+    {
+        Samochod s1 = new Samochod("Fiat", "126p", 2, 650, 6.0, "K1 NIGGA");
+        Samochod s2 = new Samochod("Syrena", "105", 2, 800, 7.6, "K2 PDŁ");
+        Samochod s3 = new Samochod("Audi", "RS8", 4, 5200, 12, "K3 UPO");
+        Garaz g2 = new Garaz("ul. Garażowa 2", 2);
+        g2.WprowadzSamochod(s2);
+        g2.WprowadzSamochod(s1);
+        g2.WypiszInfo();
+        Osoba o1 = new Osoba();
+        Osoba o2 = new Osoba();
+        o1.DodajSamochod(s1);
+
+        o1.WypiszInfo();
+
+        o2.DodajSamochod(s2);
+        o2.DodajSamochod(s3);
+
+        o2.WypiszInfo();
+
+        o2.UsunSamochod("K2 PDŁ");
+
+        o2.WypiszInfo();
+
+
+    }
     static void Main()
     {
         //Zadanie1();
-        Zadanie2();
-
+        //Zadanie2();
+        Zadanie3();
 
 
     }

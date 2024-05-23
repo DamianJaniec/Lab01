@@ -10,7 +10,7 @@
     public static int ilosc_samochodow = 0;
 
 
-    public string Marka //funkcje, metody - jak zwal, tak ruchal wojtka pies
+    public string Marka //funckje, ale troche dziwne
     {
         get { return marka; }
         set { marka = value; }
@@ -35,7 +35,7 @@
         get { return srednieSpalanie; }
         set { srednieSpalanie = value;}
     }
-    public Samochod()
+    public Samochod() //konstruktory dwa
     {
         ilosc_samochodow += 1;
     }
@@ -50,7 +50,7 @@
         
         ilosc_samochodow += 1;
     }
-    public double ObliczSpalanie(double trasa) 
+    public double ObliczSpalanie(double trasa)  //zwyczajne ludzkie, normalne metody
         //zakladamy ze uzytkownik nie jest debilem, i nie robi mi pod gorke - trase podaje w kilometrach
     {
         double spalanieNaKm = srednieSpalanie / 100; //spalanie na 1km

@@ -25,3 +25,11 @@
         Samochod.WypiszIloscSamochodow();
     }
 }
+/*Pytania do Podrazy
+    1.O co chodzi z value przy set'cie i get'cie
+        jeżeli Value to dostarczony parametr to czy mogę
+        zrobić więcej dostarczonych parametrów?
+    2.Jakim kurwa cudem te pliki są połączone
+        W którym miejscu są podlinkowane
+
+*/

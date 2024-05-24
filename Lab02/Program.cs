@@ -68,7 +68,9 @@
         }
         static void Zadanie3()
         {
-
+            //nie chce mi sie tego testowac
+            //ide zjesc sniadanie
+            //naura
         }
         static void Main()
         {

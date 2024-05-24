@@ -66,10 +66,15 @@
 
 
         }
+        static void Zadanie3()
+        {
+
+        }
         static void Main()
         {
             //Zadanie1 ();
-            Zadanie2();
+            //Zadanie2();
+            Zadanie3();
         }
     }
 }

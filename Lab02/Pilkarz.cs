@@ -2,9 +2,9 @@
 {
     class Pilkarz:Osoba
     {
-        private string pozycja;
-        private string klub;
-        private int liczbaGoli;
+        protected string pozycja;
+        protected string klub;
+        protected int liczbaGoli;
 
         public string Pozycja
         { 
@@ -36,12 +36,12 @@
             imie = _imie;
             nazwisko = _nazwisko;
             dataUrodzenia = _dataUrodzenia;
-            Pozycja = _pozycja;
-            Klub = _klub;
-            LiczbaGoli = _liczbaGoli;
+            pozycja = _pozycja;
+            klub = _klub;
+            liczbaGoli = _liczbaGoli;
         }
 
-        public void StrzelGola()
+        public virtual void StrzelGola()
         {
             liczbaGoli += 1;
         }
@@ -51,4 +51,57 @@
                 $"gra w klubie: {klub} na pozycji {pozycja} i ma na karcie {liczbaGoli} goli");
         }
     }
+    class PilkarzReczny:Pilkarz
+    {
+        public PilkarzReczny(
+            string _imie, string _nazwisko, string _dataUrodzenia, string _pozycja, string _klub, int _liczbaGoli = 0)
+        {
+            imie = _imie;
+            nazwisko = _nazwisko;
+            dataUrodzenia = _dataUrodzenia;
+            pozycja = _pozycja;
+            klub = _klub;
+            liczbaGoli = _liczbaGoli;
+        }
+        public PilkarzReczny()
+        {
+            imie = "brak";
+            nazwisko = "brak";
+            dataUrodzenia = "brak";
+            pozycja = "brak";
+            klub = "brak";
+            liczbaGoli = 0;
+        }
+        public override void StrzelGola()
+        {
+            base.StrzelGola();
+        }
+    }
+    class PilkarzNozny:Pilkarz
+    {
+        public PilkarzNozny(
+            string _imie, string _nazwisko, string _dataUrodzenia, string _pozycja, string _klub, int _liczbaGoli = 0)
+        {
+            imie = _imie;
+            nazwisko = _nazwisko;
+            dataUrodzenia = _dataUrodzenia;
+            pozycja = _pozycja;
+            klub = _klub;
+            liczbaGoli = _liczbaGoli;
+        }
+        public PilkarzNozny()
+        {
+            imie = "brak";
+            nazwisko = "brak";
+            dataUrodzenia = "brak";
+            pozycja = "brak";
+            klub = "brak";
+            liczbaGoli = 0;
+        }
+        public override void StrzelGola()
+        {
+            base.StrzelGola();
+        }
+    }
 }
+

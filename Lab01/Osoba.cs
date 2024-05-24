@@ -51,8 +51,6 @@
                 posiadaneSamochody[iloscSamochodow] = s1.NrRejestracyjny;
                 iloscSamochodow++;
             }
-
-
         }
         public void UsunSamochod(string nr)
         {
@@ -69,7 +67,7 @@
         }
         public void WypiszInfo()
         {
-            Console.WriteLine($"Imie: {imie}");
+            Console.WriteLine($"\n\nImie: {imie}");
             foreach (string tmp in  posiadaneSamochody)
             {
                 if (tmp != null)
